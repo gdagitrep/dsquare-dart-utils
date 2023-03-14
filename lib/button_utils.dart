@@ -66,7 +66,7 @@ class ButtonWithTextChangeState extends State<ButtonWithTextChange> {
 }
 
 class RaisedButtonWithProgress extends StatefulWidget {
-  final Function? onPressed;
+  Function? onPressed;
   final String textString;
   final Color buttonColor;
   final Widget? widgetAfterCompletion;
