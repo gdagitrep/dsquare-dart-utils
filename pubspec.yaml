@@ -1,7 +1,9 @@
-name: dart_utils
-description: A new Flutter package project.
+name: dsquare_dart_utils
+description: Some commonly used utils, used across projects.
 version: 0.0.1
-homepage:
+homepage: https://github.com/gdagitrep/dsquare-dart-utils.git
+repository: https://github.com/gdagitrep/dsquare-dart-utils.git
+issue_tracker: https://github.com/gdagitrep/dsquare-dart-utils/issues
 
 environment:
   sdk: '>=2.18.4 <3.0.0'

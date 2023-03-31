@@ -5,7 +5,7 @@ import 'package:uuid/uuid.dart';
 
 class Dioo {
 
-  static Dio _dio = Dio(BaseOptions(connectTimeout: 0, receiveTimeout: 0));
+  static final Dio _dio = Dio(BaseOptions(connectTimeout: 0, receiveTimeout: 0));
 
   static post<T>(
     String path, {
@@ -144,8 +144,9 @@ class Dioo {
           onSendProgress: onSendProgress,
           onReceiveProgress: onReceiveProgress);
 
-      if (trackTelemetry)
+      if (trackTelemetry) {
         _sendTelemetry(response, null, "PUT", timestamp, path, queryParameters, propertiesToLog, stopwatch, telemetryClient);
+      }
       return response;
     } on DioError catch (error) {
       _sendErrorTelemetry(error, 0, "PUT", timestamp, path, queryParameters, propertiesToLog, stopwatch, telemetryClient);
